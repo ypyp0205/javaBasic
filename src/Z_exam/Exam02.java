@@ -112,6 +112,8 @@ public class Exam02 {
 				e. long - 0                  //L이 안붙음
 				f. String - ""  */            //null이 기본값임
 
+			
+				//집에서 한 작업
 	}
 
 }
