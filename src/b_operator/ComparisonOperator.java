@@ -55,6 +55,33 @@ public class ComparisonOperator {
 		b = !"abc".equals("ABC");
 		//같지 않다의 결과를 얻기 위해서는 !(NOT)을 앞에 붙여준다.
 		
+		
+		//다음의 문장들을 코드로 작성 후 연산결과를 출력해주세요.
+		//1보다 2가 큰가?
+		
+		b = 1 < 2;	
+		System.out.println( b );
+		
+		//0은 100보다 작거나 같은가?
+		
+		b = 0 <= 100;
+		System.out.println( b );
+		
+		
+		
+		//3.14f와 3.14는 다른가?
+		b = 3.14f != 3.14;
+		System.out.println( b );
+		
+		//"남자"와 "여자"는 다른가?
+		b = !"남자".equals("여자");
+		System.out.println( b );
+		
+		
+		
+		
+		
+		
 	}
 
 }
