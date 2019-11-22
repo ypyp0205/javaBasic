@@ -51,7 +51,7 @@ public class Exam03 {
 				public static void main(String[] args) {
 				int num = 10;
 		//		System.out.println( 0 < num ? "양수" : 0 > num ? "음수" : "0" );
-				}
+				}     num > 0 ? "양수" : num <0 ? "음수" : "0" 
 				}
 				
 				
@@ -107,7 +107,7 @@ public class Exam03 {
 				class Exercise3_7 {
 				public static void main(String[] args) {
 				int fahrenheit = 100;
-				float celcius = (int) ((5/9f *((fahrenheit - 32))) * 100 + 0.5) / 100f;
+				float celcius = (int) ((5/9f *(fahrenheit - 32))*100 + 0.5)/100f;
 				System.out.println("Fahrenheit:"+fahrenheit);
 				System.out.println("Celcius:"+celcius);
 				}
@@ -126,14 +126,14 @@ public class Exam03 {
 				public static void main(String[] args) {
 				byte a = 10;
 				byte b = 20;
-				byte c = a + b;
-				char ch = 'A';
-				ch = ch + 2;
-				float f = 3 / 2;
-				long l = 3000 * 3000 * 3000;
+				byte c = a + b;    // (byte) (a+b)
+				char ch = 'A';      
+				ch = ch + 2;    //(char)(ch + 2);
+				float f = 3 / 2;                 // 3 / 2f;
+				long l = 3000 * 3000 * 3000;   //3000 * 3000 * 3000L;
 				float f2 = 0.1f;
 				double d = 0.1;
-				boolean result = d==f2;
+				boolean result = d==f2;       //(float)(d==f2;)
 				System.out.println("c="+c);
 				System.out.println("ch="+ch);
 				System.out.println("f="+f);
@@ -145,11 +145,11 @@ public class Exam03 {
 				
 				[3-9] 다음은 문자형 변수 ch가 영문자(대문자 또는 소문자)이거나 숫자일 때만 변수 b
 				의 값이 true가 되도록 하는 코드이다. (1)에 알맞은 코드를 넣으시오.
-				[연습문제]/ch3/Exercise3_9.java
+				[연습문제]/ch3/Exercise3_9.java            
 				class Exercise3_9 {
 				public static void main(String[] args) {
 				char ch = 'z';
-				boolean b = ('a' <= ch && ch <= 'z') || ('0' <= ch && ch <= '9');
+				boolean b = ('a' <=  ch&&ch <= 'z') || ('A' <=  ch&&ch <= 'Z') || ('1' <=  ch && ch <= '9');
 				System.out.println(b);
 				}
 				}
