@@ -321,8 +321,6 @@ public class TEST {
 				System.out.println("당신의 연애 유형 테스트 결과는 'C'타입 입니다!!");
 				System.out.println("YES or NO");
 				scan = s.nextLine();
-			}else{
-				
 			}
 				
 		
