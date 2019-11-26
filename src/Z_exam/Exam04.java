@@ -1,9 +1,9 @@
-package C_statement;
+package Z_exam;
 
 import java.util.Scanner;
 
 
-public class TESTTTT {
+public class Exam04 {
 
 	public static void main(String[] args) {
 		
@@ -25,7 +25,9 @@ public class TESTTTT {
 				int x = 15;
 				b = 10 < x && x < 20;
 				System.out.println(b);
-				
+		//		int x =15
+		 * 		if(10 < x && x < 20);
+		  		System.out.println(x + "는 true입니다.");
 				2. char형 변수 ch가 공백이나 탭이 아닐 때 true인 조건식
 				boolean b;
 				char ch = '\t';
@@ -67,6 +69,7 @@ public class TESTTTT {
 				String a = str == "yes" ? "true" : "false";
 				System.out.println(a);
 				
+				if(str.equals("yes"))
 				
 				[4-2] 1부터 20까지의 정수 중에서 2 또는 3의 배수가 아닌 수의 총합을 구하시오.
 				int sum = 0;
@@ -126,13 +129,12 @@ public class TESTTTT {
 				[4-6] 두 개의 주사위를 던졌을 때, 눈의 합이 6이 되는 모든 경우의 수를 출력하는 프
 				로그램을 작성하시오.
 				
-				int i
-				int f
-				for( i >= 1 || i <= 6 ){
-				     }for ( f >= 1 || f <= 6 ){
-				      }if( f + i == 6){
-				      system.out.println;
-				      } 
+				for(int i = 1 ; i <= 6 ; i++){
+			    for(int j = 1 ; j <= 6 ; j++){
+			    if(i+j==6)
+			    System.out.println(i+" "+j);
+			    }
+			    }
 				
 				16 Java의 정석定石 3판 - 연습문제 풀이
 				[4-7] Math.random()을 이용해서 1부터 6사이의 임의의 정수를 변수 value에 저장하는
@@ -144,10 +146,22 @@ public class TESTTTT {
 				System.out.println("value:"+value);
 				}
 				}
+				int value = (int)(Math.random()*6)+1;
+				System.out.println("value:"+value);
 				
 				
 				[4-8] 방정식 2x+4y=10의 모든 해를 구하시오. 단, x와 y는 정수이고 각각의 범위는
 				0<=x<=10, 0<=y<=10 이다.
+				
+				for(int x=0; x <=10; x++){
+				for(int y=0; y <=10; y++){
+				if(2*x+4*y == 10){
+				
+				System.out.println("x="+x+"y="+y);
+				}
+					}
+						}
+	
 				
 				
 				[4-9] 숫자로 이루어진 문자열 str이 있을 때, 각 자리의 합을 더한 결과를 출력하는 코
@@ -167,15 +181,32 @@ public class TESTTTT {
 				System.out.println("sum="+sum);
 				}
 				}
+				
+				String str = "12345";
+				int sum = 0;
+				for(int i = 0; i < str.length(); i++{
+				sum += str.charAt(i) - '0';
+				}
+				system.out.println("sum=" + sum);
+				
+		//		String str = "12345";
+				int sum = 0;
+				for(int i = 0; i < str.length(); i++){
+				sum += str.charAt(i) - '0';
+				}
+				System.out.println("sum=" + sum);
+			
+				
+				
 				[실행결과]
 				15
 				[실행결과]
 				x=1, y=2
 				x=3, y=1
 				x=5, y=0
+				
+				
 				Java의 정석定石 3판 - 연습문제 풀이 17
-				
-				
 				[4-10] int타입의 변수 num 이 있을 때, 각 자리의 합을 더한 결과를 출력하는 코드를
 				완성하라. 만일 변수 num의 값이 12345라면, ‘1+2+3+4+5’의 결과인 15를 출력하라. (1)
 				에 알맞은 코드를 넣으시오.
@@ -339,34 +370,48 @@ public class TESTTTT {
 				
 
 
-		int i;
-		int f;
-		for( i >= 1 || i <= 6 ){
-		     }for ( f >= 1 || f <= 6 ){
-		      }if( f + i == 6){
-		      system.out.println;
-		      } 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	
+		String str = "12345";
+		int sum = 0;
+		for(int i = 0; i < str.length(); i++){
+		sum += str.charAt(i) - '0';
+		}
+		System.out.println("sum=" + sum);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
