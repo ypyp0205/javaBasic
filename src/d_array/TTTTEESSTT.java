@@ -88,10 +88,29 @@ public class TTTTEESSTT {
 		}
 		System.out.println(input);
 		
+		
+		
+		Scanner sc = new Scanner(System.in);	
+		System.out.println("숫자를 입력하세요>");
+		String number = sc.nextLine();
+		String newNumber = "";
+		
+		int count = 0;
+
+		for (int i = number.length() - 1; i >= 0; i--) {
+			newNumber = number.charAt(i) + newNumber;
+			count++;
+			if (count % 3 == 0 && count != number.length()) {
+				newNumber = "," + newNumber;
+			}
+		}
+		System.out.println(newNumber);
+				
+				
+				
+				
+				
 			
-		
-		
-		
 		
 		
 		
