@@ -82,26 +82,14 @@ public class Score {
 
 			}
 
-			java += score[i][0];
-
-			Oracle += score[i][1];
-
-			HTML += score[i][2];
-
-			CSS += score[i][3];
-
-			JQuery += score[i][4];
-
-			JSP += score[i][5];
+			
 
 			avg[i] = (int)(sum[i] / score[i].length * 100000) / 100000;
-
-			
-
-			
-
+					
 		}
 
+		
+		
 		
 
 		for(int i= 0; i < name.length; i++){
@@ -201,15 +189,15 @@ public class Score {
 
 				System.out.print(score[i][j] + "\t");
 
+			}
+			System.out.println(sum[i] + "\t"+ avg[i]);
+		}
 				
 
-			}
 
-			System.out.println(sum[i] + "\t"+ avg[i]);
 
 		
 
-		}
 
 			
 
@@ -227,8 +215,8 @@ public class Score {
 
 	
 
-			}
-
- 
 
 	}
+}
+ 
+
