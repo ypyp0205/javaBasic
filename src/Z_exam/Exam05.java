@@ -11,8 +11,8 @@ public class Exam05 {
 				하시오.
 				a. int[] arr[];                              
 				b. int[] arr = {1,2,3,};                     
-				c. int[] arr = new int[5];                   // 
-				d. int[] arr = new int[5]{1,2,3,4,5};        //
+				c. int[] arr = new int[5];                  
+				d. int[] arr = new int[5]{1,2,3,4,5};        
 				e. int arr[5];                               
 				f. int[] arr[] = new int[3][];               
 				
@@ -184,8 +184,8 @@ public class Exam05 {
 		   			coin[i] -= coinNum;
 					}else{
 					coinNum = coin[i];
-			  		coin[i] -= coinNum;
-					}
+					}coin[i] -= coinNum;
+			  		
 		
 					money -= (coinUnit[i] * coinNum);
 				
@@ -286,7 +286,10 @@ public class Exam05 {
 				for(int i=0; i < star.length;i++) {
 				for(int j=0; j < star[i].length;j++) {
 				
-				(1) 알맞은 코드를 넣어 완성하시오.
+					int x = j;
+		정답 : 		int y = star.length-1-i;
+					result[x][y]=star[i][j];
+					  result[j][i] = star[star.length - 1 - i][j]
 				 }
 				}
 				for(int i=0; i < result.length;i++) {
@@ -308,6 +311,9 @@ public class Exam05 {
 				**
 				**
 				Java의 정석定石 3판 - 연습문제 풀이 29
+			
+				
+				
 				[5-10] 다음은 알파벳과 숫자를 아래에 주어진 암호표로 암호화하는 프로그램이다.
 				(1)에 알맞은 코드를 넣어서 완성하시오.
 				[연습문제]/ch5/Exercise5_10.java
@@ -325,7 +331,16 @@ public class Exam05 {
 				for(int i=0; i < src.length();i++) {
 				char ch = src.charAt(i);
 				
-				(1) 알맞은 코드를 넣어 완성하시오.
+
+					if('a' <= ch && ch <='z') {
+					result += abcCode[ch-'a'];
+		정답 : 		} else if('0' <= ch && ch <='9') {
+					result += numCode[ch-'0'];
+					}
+
+
+
+
 				 }
 				System.out.println("src:"+src);
 				System.out.println("result:"+result);
@@ -341,6 +356,10 @@ public class Exam05 {
 				src:abc123
 				result:`~!wer
 				30 Java의 정석定石 3판 - 연습문제 풀이
+				
+				
+				
+				
 				[5-11] 주어진 2차원 배열의 데이터보다 가로와 세로로 1이 더 큰 배열을 생성해서 배열
 				의 행과 열의 마지막 요소에 각 열과 행의 총합을 저장하고 출력하는 프로그램이다. (1)
 				에 알맞은 코드를 넣어서 완성하시오.
@@ -360,8 +379,15 @@ public class Exam05 {
 				for(int i=0; i < score.length;i++) {
 				for(int j=0; j < score[i].length;j++) {
 				
-				(1) 알맞은 코드를 넣어 완성하시오.
-				 }
+				
+				result[i][j] = score[i][j];
+				result[i][score[0].length] += result[i][j];
+정답 : 			result[score.length][j] += result[i][j];
+				result[score.length][score[0].length] += result[i][j];
+
+
+
+			 	}
 				}
 				for(int i=0; i < result.length;i++) {
 				for(int j=0; j < result[i].length;j++) {
@@ -379,7 +405,21 @@ public class Exam05 {
 				50 50 50 150
 				240 240 240 720
 				Java의 정석定石 3판 - 연습문제 풀이 31
-				[5-12] 예제5-23을 변경하여, 아래와 같은 결과가 나오도록 하시오.
+
+
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				[5-13] 단어의 글자위치를 섞어서 보여주고 원래의 단어를 맞추는 예제이다. 실행결과와
 				같이 동작하도록 예제의 빈 곳을 채우시오.
 				[실행결과]
