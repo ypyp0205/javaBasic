@@ -48,6 +48,8 @@ public class Exam05 {
 				int[] arr = {10, 20, 30, 40, 50};
 				int sum = 0;
 				
+				
+				
 				정답 : for(int i = 0; i < arr.length; i++)
 			          sum += arr[i];
 				결과값 : 150
@@ -73,6 +75,16 @@ public class Exam05 {
 				};
 				int total = 0;
 				float average = 0;
+				
+				for(int i = 0; i < arr.length; i++){
+				for(int j = 0; j < arr[i].length; i++){
+				total += arr[i][j]
+					}
+				}
+				average = total / arr.length * arr[0].length;
+				
+				
+				
 				
 				정답 : for (int i = 0; i < arr.length; i++) {
 					  for (int j = 0; j < arr[i].length; j++) {

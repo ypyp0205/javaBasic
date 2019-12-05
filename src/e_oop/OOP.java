@@ -30,6 +30,48 @@ public class OOP {
 		//test1() 호출시 출력되는 문장에 번호를 붙여주세요.
 		sc.test1();
 			
+		
+		//방금 만든 클래스의 객체를 생성하고 변수에 저장해주세요.
+		ClassMaker cm = new ClassMaker();
+		//객체가 저장된 변수를 통해 메서드들을 호출해주세요.
+		//파라미터가 있는 메서드는 타입에 맞는 값을 넘겨주시고,
+		//리턴타입이 잇는 메서드는 리턴받은 값을 출력해주세요.
+		
+		
+		
+		/*cm.method1();
+		
+		String method2 = cm.method2();
+		System.out.println(method2);
+		
+		cm.method3(3123);
+		
+		int method4 = cm.method4(31,23);
+		System.out.println(method4);*/
+		
+		
+		Calculator cc = new Calculator();
+		
+		double plus = cc.plus(123456,654321);
+		System.out.println(plus);
+		double minus = cc.minus(plus,123456);
+		System.out.println(minus);
+		double multi = cc.multi(minus,123456);
+		System.out.println(multi);
+		double division = cc.division(multi,654321);
+		System.out.println(division);
+		double remainder = cc.remainder(division,123456);
+		System.out.println(remainder);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
