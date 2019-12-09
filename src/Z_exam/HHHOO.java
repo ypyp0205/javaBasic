@@ -24,19 +24,15 @@ public static void main(String[] args){
 
 
 
-
-
-
-
 }
 
-	String[] parkNum = {"--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", }; // 주차장 자릿수
+	String[] parkNum = { "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--" }; // 주차장 자릿수
 	String myCarNum = new String(); // 내차량 번호 입력할 변수
 	int myCarPosition = 0; // 내차량 위치를 저장할 변수
 	
 	
 	
-	int payMent = 3000;     //주차 요금
+	int payMent = 10000;     //주차 요금
 	
 	
 	
@@ -97,9 +93,10 @@ public static void main(String[] args){
 		String text = new String();	
 		Scanner scan = new Scanner(System.in);   //스케너 
 		text = scan.nextLine();
+		ho.myCarNum = text;
 		if(text.length() == 7){
 			System.out.println("고객님의 차량번호 <" + text + ">가 정상 입력되었습니다.");
-			ho.myCarNum = text;
+			
 			
 			ho.cash();
 		}else{
@@ -126,7 +123,7 @@ public static void main(String[] args){
 	void reCash(int a, int b){
 		
 		if(a == b){
-			System.out.println("주차요금 3000원이 정상 결제 되었습니다. \n안녕히 가십시오");
+			System.out.println("주차요금 " + payMent + "원이 정상 결제 되었습니다. \n안녕히 가십시오");
 			ho.finish();
 		}else if(a > b){
 			int c = a - b;
@@ -140,12 +137,13 @@ public static void main(String[] args){
 		
 		}else if(a < b){
 			int d = b - a;
-			System.out.println("주차요금 3000원이 정상 결제 되었습니다. \n잔돈 " + d + "원을 받아주세요. \n안녕히 가십시요.");
+			System.out.println("주차요금 " + payMent + "원이 정상 결제 되었습니다. \n잔돈 " + d + "원을 받아주세요. \n안녕히 가십시요.");
 		}
 		
 	}
 
 	void finish(){
+		
 		boolean a = Arrays.asList(ho.parkNum).contains(ho.myCarNum);
 		if(a == true){
 			ho.parkNum[ho.myCarPosition] = "--비어있음--";
