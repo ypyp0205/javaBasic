@@ -26,9 +26,9 @@ public static void main(String[] args){
 
 }
 
-	String[] parkNum = { "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--" }; // 주차장 자릿수
-	String myCarNum = new String(); // 내차량 번호 입력할 변수
-	int myCarPosition = 0; // 내차량 위치를 저장할 변수
+	static String[] parkNum = { "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--" }; // 주차장 자릿수
+	static String myCarNum = new String(); // 내차량 번호 입력할 변수
+	static int myCarPosition = 0; // 내차량 위치를 저장할 변수
 	
 	
 	
@@ -144,7 +144,10 @@ public static void main(String[] args){
 
 	void finish(){
 		
+		
+		
 		boolean a = Arrays.asList(ho.parkNum).contains(ho.myCarNum);
+	
 		if(a == true){
 			ho.parkNum[ho.myCarPosition] = "--비어있음--";
 			ho.select();

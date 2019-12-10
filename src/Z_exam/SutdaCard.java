@@ -2,6 +2,10 @@ package Z_exam;
 
 public class SutdaCard {
 	
+	
+	
+	
+	
 	public static void main(String[] args) {
 
 	//----------------------------------------------1번
@@ -76,13 +80,6 @@ public class SutdaCard {
 	int     math   수학점수  */
 	
 	
-
-
-
-
-
-
-
 
 	class Student{
 		String name;  //학생이
@@ -218,7 +215,7 @@ public class SutdaCard {
 				b. 생성자는 객체를 생성하기 위한 것이다.
 				c. 클래스에는 생성자가 반드시 하나 이상 있어야 한다.
 				d. 생성자가 없는 클래스는 컴파일러가 기본 생성자를 추가한다.
-				e. 생성자는 오버로딩 할 수 없다.	*/
+				e. 생성자는 오버로딩 할 수 없다.	*/     //---------------------오버로딩인란
 		
 		   /*[해설]
 				b. 생성자는 객체를 생성하기 위한 것이다.
