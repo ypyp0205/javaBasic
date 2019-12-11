@@ -24,7 +24,7 @@ public class Inheritance {
 		 * - 없으면 컬파일러가 자동으로 추가한다.
 		 * 
 		 * << 오버라이딩 >>
-		 * - 상속받ㅇ은 메서드의 내용을 재정의하는 것이다.
+		 * - 상속받은 메서드의 내용을 재정의하는 것이다.
 		 * - 상속받은 메서드와 리턴타입, 메서드명, 파라미터가 같아야 한다.
 		 * - 상속받은 메서드보다 좁은 범위의 접근제어자로 변경할수없다.
 		 * - 상속받은 메서드보다 많은 예외를 선언할 수 없다.
@@ -50,9 +50,59 @@ public class Inheritance {
 		 * << Singleton(싱글톤 패턴) >>
 		 * - 객체 생성을 제한하려 하나의 객체만 사용하게 하는 디자인 패턴이다.
 		 * - 객체들간에 객체를 공유하기 위해 사용한다.
-		 * 
 		 */
+		AccessModifier am = new AccessModifier();
+		
+		System.out.println(am.publicVar);
+		am.publicMethod();
+		
+		System.out.println(am.protectedVar);
+		am.protectedMethod();
+		
+		System.out.println(am.defaultVar);
+		am.defaultMethod();
+		
+//		System.out.println(am.privateVar);
+//		am.privateMethod();
 
+		Time t = new Time();
+		
+	/*	t.setHour(16);
+		t.setMinute(5);
+		t.setSecond(999);
+		*/
+		
+		t.setSecond(100000);
+		System.out.println(t);
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

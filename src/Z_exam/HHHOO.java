@@ -143,14 +143,14 @@ public static void main(String[] args){
 	}
 
 	void finish(){
+		for(int i = 0; i < parkNum.length; i++){
+			if(parkNum[i] == myCarNum){
+				parkNum[i] = "--비어있음--";
+				select();	
+			}
 		
 		
 		
-		boolean a = Arrays.asList(ho.parkNum).contains(ho.myCarNum);
-	
-		if(a == true){
-			ho.parkNum[ho.myCarPosition] = "--비어있음--";
-			ho.select();
 		}
 	}
 
