@@ -3,8 +3,8 @@ package f_oop2;
 public class Inheritance {
 
 	public static void main(String[] args) {
-		/*
-		 * << 상속 >>
+		
+		/* * << 상속 >>
 		 * - 기존의 클래스를 물려받아 새로운 클래스를 만드는 것이다.
 		 * - 자식클래스명 extends 부모클래스명 {}
 		 * - 부모 클래스의 생성자와 초기롸 블럭을 제외한 모든 멤버를 물려받는다.
@@ -49,8 +49,8 @@ public class Inheritance {
 		 * 
 		 * << Singleton(싱글톤 패턴) >>
 		 * - 객체 생성을 제한하려 하나의 객체만 사용하게 하는 디자인 패턴이다.
-		 * - 객체들간에 객체를 공유하기 위해 사용한다.
-		 */
+		 * - 객체들간에 객체를 공유하기 위해 사용한다.*/
+		 
 		AccessModifier am = new AccessModifier();
 		
 		System.out.println(am.publicVar);
@@ -75,10 +75,20 @@ public class Inheritance {
 		t.setSecond(100000);
 		System.out.println(t);
 		
+		Singleton s = Singleton.getInstance();
+		
+		System.out.println(Singleton.getInstance());
+		System.out.println(Singleton.getInstance());
+		System.out.println(Singleton.getInstance()); 
+		
+		System.out.println(new Inheritance());
+		System.out.println(new Inheritance());
+		System.out.println(new Inheritance());
+		
+		
+		
 	}
-
 }
-
 
 
 

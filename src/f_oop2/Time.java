@@ -14,10 +14,10 @@ public class Time {
 		if (hour < 0) {
 			this.hour = 0;
 		} else {
-
 			this.hour = hour % 24;
 		}
 	}
+
 
 	public int getMinute() {
 		return minute;
@@ -30,8 +30,8 @@ public class Time {
 			setHour(this.hour + minute / 60);
 			this.minute = minute % 60;
 		}
-
 	}
+
 
 	public int getSecond() {
 		return second;
@@ -44,16 +44,16 @@ public class Time {
 			setMinute(this.minute + second / 60);
 			this.second = second % 60;
 		}
-
 	}
+
 	
 	//object 클래스부터 상속받은 메서드
 	@Override
 	public String toString() {
 		return hour + ":" + minute + ":" + second;
 	}
-	
-	
-	
-	
 }
+	
+	
+	
+	

@@ -17,9 +17,9 @@ public static void main(String[] args){
 	
 	
 	
+	
 	ho.select();
 		
-	
 
 
 
@@ -93,7 +93,8 @@ public static void main(String[] args){
 		String text = new String();	
 		Scanner scan = new Scanner(System.in);   //스케너 
 		text = scan.nextLine();
-		ho.myCarNum = text;
+		this.ho.myCarNum = text;
+		
 		if(text.length() == 7){
 			System.out.println("고객님의 차량번호 <" + text + ">가 정상 입력되었습니다.");
 			
@@ -143,23 +144,30 @@ public static void main(String[] args){
 	}
 
 	void finish(){
-		for(int i = 0; i < parkNum.length; i++){
-			if(parkNum[i] == myCarNum){
-				parkNum[i] = "--비어있음--";
-				select();	
-			}
-		
-		
-		
+	for(int i = 0; i < parkNum.length; i++){
+		if(myCarNum.equals(parkNum[i])){
+			parkNum[i] =  "--비어있음--";
 		}
 	}
-
+		select();
+	}
+}	
 	
 	
 	
 	
 
-}
+		
+		
+	
+		
+		
+		
+		
+
+	
+
+
 
 
 
