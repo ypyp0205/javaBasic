@@ -143,16 +143,15 @@ public static void main(String[] args){
 		
 	}
 
-	void finish(){
-	for(int i = 0; i < parkNum.length; i++){
-		if(myCarNum.equals(parkNum[i])){
-			parkNum[i] =  "--비어있음--";
+	void finish() {
+		for (int i = 0; i < parkNum.length; i++) {
+			if (myCarNum.equals(parkNum[i])) {
+				parkNum[i] = "--비어있음--";
+			}
 		}
-	}
 		select();
 	}
-}	
-	
+}
 	
 	
 	
