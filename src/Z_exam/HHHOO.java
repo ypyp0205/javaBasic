@@ -1,6 +1,8 @@
 package Z_exam;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Scanner;
 
 
@@ -26,7 +28,23 @@ public static void main(String[] args){
 
 }
 
+	Calendar today = Calendar.getInstance();
+
+
+
+
+
+	static SimpleDateFormat format2 = new SimpleDateFormat ( "yyyy년 MM월dd일 HH시mm분ss초");
+	static String format_time2 = format2.format (System.currentTimeMillis());
+	static String[] days = new String[7]; 
+	 String time = format_time2;
+	
+
+	
+
+
 	static String[] parkNum = { "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--", "--비어있음--" }; // 주차장 자릿수
+	
 	static String myCarNum = new String(); // 내차량 번호 입력할 변수
 	static int myCarPosition = 0; // 내차량 위치를 저장할 변수
 	
@@ -39,10 +57,12 @@ public static void main(String[] args){
 	public static HHHOO ho = new HHHOO();
 	
 	void select(){        //입차할 것인지 출차할 것인지 선택하는 창
+		System.out.println(time);
 		System.out.println("<< JYP Parking Center >>\n");
-		System.out.println("  < 현재 주차현황 > ");
+		System.out.println("  < 현재 주차현황 > " + "     입차시간");
 		for(int i = 0; i < ho.parkNum.length; i++){
-			System.out.println("   " + ho.parkNum[i]);
+			System.out.println("   " + ho.parkNum[i] + "         " + days[i]);
+			
 		}
 		System.out.println("- 원하시는 버튼을 누루세요. \n- 입차 >> 1번 버튼 \n- 출차 >> 2번 버튼");
 		String text = new String();	
@@ -72,6 +92,14 @@ public static void main(String[] args){
 		for(int i = 0; i < parkNum.length; i++){
 			if(ho.parkNum[i] == "--비어있음--" ){
 				ho.parkNum[i] = text;
+				for (int j = 0; j < ho.days.length; j++) {
+					if(i == j ){
+					
+					days[j] = time;
+					
+					}
+				}
+				
 				ho.select();
 				break;
 				}
@@ -82,7 +110,7 @@ public static void main(String[] args){
 		}
 	}				
 				
-					
+			
 
 				
 		
@@ -155,22 +183,6 @@ public static void main(String[] args){
 	
 	
 	
-
-		
-		
-	
-		
-		
-		
-		
-
-	
-
-
-
-
-
-
 
 
 

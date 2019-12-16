@@ -2,16 +2,33 @@ package Z_exam;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 public class Test {
 
 	public static void main(String[] args) {
-		Calendar today = Calendar.getInstance();
 		
-		System.out.println(today.get(Calendar.YEAR));
-		System.out.println(today.get(Calendar.MONTH));
-		System.out.println(today.get(Calendar.DATE));
+				String[] participant = {"leo", "kiki", "eden"};
+				String[] completion = {"eden", "kiki"};  
+				String txt;
+				for(int i = 0; i < participant.length; i++){					
+				    for(int j = 0; j < completion.length; j++){
+				        if(!participant[i].equals(completion[j])){
+				        	txt = participant[i];
+				        	participant[i] = completion[j];
+				        	completion[j] = txt;
+				        		
+				       
+				        }
+				        
+				    }
+				}
+		
+		
+		
+		
+		
+		
+		
 	}
 	
 
