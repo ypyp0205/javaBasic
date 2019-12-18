@@ -56,124 +56,125 @@ public class Score {
 
 		
 
-		
-
-	
-
-			
-
 		int[][] score = new int [name.length][sub.length];
-
 		int[] sum = new int [name.length];
-
 		double[] avg = new double[name.length]; 
-
 		int rank[] = new int [name.length];
 
 		
+		
 
 		for(int i =0; i < score.length; i++){
-
 			for(int j = 0; j < score[i].length; j++){
-
 				score[i][j] = (int)(Math.random()* (100-50+1) + 50);
-
 				sum[i] += score[i][j];
-
 			}
-
-			
-
 			avg[i] = (int)(sum[i] / score[i].length * 100000) / 100000;
-					
 		}
-
-		
-		
 		
 
 		for(int i= 0; i < name.length; i++){
-
 			rank [i]=1;
-
 			for (int j =0; j < name.length; j++){
-
 				if(sum[i]<sum[j]){
-
 					rank[i]++;
-
 				}
-
 			}
-
-				
-
 		}
-
-		
-
-		
-
+			
+			
 		for(int i = 0; i < rank.length; i++){  //i는 고정되어있고, j가 계속 움직이는 애
-
 			boolean changed = false;
-
 			for(int j = 0; j < rank.length-1-i; j++){  //한바퀴 돌때마다 
-
 				if(rank[j] > rank[j +1 ]){   //0과 1비교, 1과 2비교...그래서 +1
-
+					
 					int temp = rank[j];
-
 					rank[j] = rank[j+1];
-
 					rank[j+1] = temp;
-
 					
-
 					int temp2 = sum[j];
-
 					sum[j] = sum[j+1];
-
 					sum[j+1] = temp2;
-
 					
-
 					String temp3 = name[j];
-
 					name[j] = name[j+1];
-
 					name[j+1] = temp3;
-
 					
-
 					int temp4[]= score[j];
-
 					score[j] = score[j+1];
-
 					score[j+1] = temp4;
-
 					
 					double temp5= avg[j];
-
 					avg[j] = avg[j+1];
-
 					avg[j+1] = temp5;
+					
+					changed = true;
+				}
+			}
+			if(!changed){
+				break;
+			}
+		}
+				
+		for(int i =0; i < score.length; i++){
+			System.out.print(rank[i]+ "\t" + name[i] + "\t");
+			for(int j = 0; j < score[i].length; j++){
+				System.out.print(score[i][j] + "\t");
+			}
+			System.out.println(sum[i] + "\t"+ avg[i]);
+		}
+					
+					
+				
+			
+			
+			
+
+
+
+
+			
+			
 
 					
 
-					changed = true;
+		
+		
+		
 
-				}
 
-			}
+		
 
-			if(!changed){
+		
 
-				break;
 
-			}
 
-		}
+
+		
+
+					
+
+
+
+					
+
+
+		
+		
+
+					
+
+
+
+		
+
+					
+
+
+
+
+
+
 
 		
 
@@ -181,17 +182,10 @@ public class Score {
 
 			
 
-		for(int i =0; i < score.length; i++){
 
-			System.out.print(rank[i]+ "\t" + name[i] + "\t");
 
-			for(int j = 0; j < score[i].length; j++){
 
-				System.out.print(score[i][j] + "\t");
 
-			}
-			System.out.println(sum[i] + "\t"+ avg[i]);
-		}
 				
 
 
