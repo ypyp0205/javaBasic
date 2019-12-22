@@ -9,15 +9,12 @@ public static void main(String[] args) {
 			
 		
 		
-		
-		
-		Date today = new Date();
-		
-		System.out.println(today);
-		
-		
-		
-		
+		int i = 10;
+		if (i < 5) {
+			System.out.println(" 5보다 작네");
+		}else{
+			
+
 		
 		
 		
