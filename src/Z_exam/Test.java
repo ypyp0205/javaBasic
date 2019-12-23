@@ -7,18 +7,11 @@ public class Test {
 	
 public static void main(String[] args) {
 			
-		
-		
-		int i = 10;
-		if (i < 5) {
-			System.out.println(" 5보다 작네");
-		}else{
+		int a = 0;
+		for (int i = 1; i < 11; i++) {
+			a += i;
 			
-
-		
-		
-		
-		
+		}
 		
 		
 		
